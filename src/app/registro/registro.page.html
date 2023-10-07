@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>CI</ion-label>
+    <ion-input type="text" [(ngModel)]="usuario.ci"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Nombre completo</ion-label>
+    <ion-input type="text" [(ngModel)]="usuario.nombreCompleto"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Fecha de nacimiento</ion-label>
+    <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="usuario.fechaNacimiento"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Sexo</ion-label>
+    <ion-select [(ngModel)]="usuario.sexo">
+      <ion-select-option value="masculino">Masculino</ion-select-option>
+      <ion-select-option value="femenino">Femenino</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Correo</ion-label>
+    <ion-input type="email" [(ngModel)]="usuario.correo"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Contraseña</ion-label>
+    <ion-input type="password" [(ngModel)]="usuario.contrasena"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Repite la contraseña</ion-label>
+    <ion-input type="password" [(ngModel)]="usuario.contrasenaRepetida"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="registrar()">Registrar</ion-button>
+</ion-content>
